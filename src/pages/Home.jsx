@@ -1,4 +1,6 @@
 import React from "react";
+import Post from "./Post";
+import PostService from "../services/post.service";
 
 const mockPosts = [
   {
@@ -22,6 +24,18 @@ const mockPosts = [
       "ในช่วงที่ผ่านมามีการพูดถึงแนวทาง AI ยุคใหม่ที่ผสานเทคโนโลยีเข้ากับบทบาทเปลี่ยนแปลงองค์กรอย่างรวดเร็ว และที่สำคัญคือมีการนำไปใช้ในหลากหลายอุตสาหกรรม...",
     image:
       "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+  {
+    id: 3,
+    title: "อนาคตของเทคโนโลยี Quantum Computing ในปี 2030",
+    author: "jittaporn",
+    date: "10 มกราคม 2026 - 14:30",
+    summary:
+      "Quantum Computing กำลังจะปฏิวัติวงการเทคโนโลยีและวิทยาศาสตร์ ด้วยพลังการประมวลผลที่เหนือกว่าคอมพิวเตอร์ทั่วไปหลายเท่า ส่งผลต่อหลากหลายอุตสาหกรรมตั้งแต่การแพทย์จนถึงการเงิน...",
+    image:
+      "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=800",
+    content:
+      "Quantum Computing คือเทคโนโลยีใหม่ที่ใช้หลักการควอนตัมฟิสิกส์ในการประมวลผลข้อมูล ซึ่งสามารถแก้ปัญหาที่ซับซ้อนมาก ๆ ได้อย่างรวดเร็ว ในปี 2030 คาดว่า Quantum Computers จะมีบทบาทสำคัญในวงการวิทยาศาสตร์ เช่น การค้นคว้าทางการแพทย์ การพัฒนายาใหม่ ๆ และระบบความปลอดภัยทางไซเบอร์...",
   },
 ];
 

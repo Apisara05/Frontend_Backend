@@ -29,6 +29,16 @@ const Post = () => {
           </a>
         </div>
 
+        {/* Edit Button */}
+        <div className="flex justify-center mb-8">
+          <a
+            href="/delete-post"
+            className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm"
+          >
+            <FaPen /> Delete Post
+          </a>
+        </div>
+
         {/* Content */}
         <div className="prose max-w-none text-gray-800 leading-relaxed mb-6">
           <p>
@@ -53,7 +63,7 @@ const Post = () => {
         {/* Image */}
         <div className="flex justify-center">
           <img
-            src="https://img.kbtg.ai/xyz_hero_example.jpg"
+            src="https://www.blognone.com/sites/default/files/news-feature-image/2025/2025-12/gemini_generated_image_p9zo4sp9zo4sp9zo.jpg"
             alt="post"
             className="rounded-lg shadow-md w-full"
           />

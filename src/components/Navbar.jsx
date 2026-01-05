@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
+
 const Navbar = () => {
-  const { userInfo, logout } = useContext(UserContext);
+  const { userInfo, logout } = useContext(UserContext); // ดึง userInfo และ logout จาก Context
   const username = userInfo?.username;
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout();
-    navigate("/");
+    logout(); // เรียก logout จาก Context
+    navigate("/login"); // redirect ไปหน้า login
   };
 
   return (
@@ -24,10 +25,12 @@ const Navbar = () => {
               <Link to="/create-post">Create a new Post</Link>
             </li>
             <li className="cursor-pointer hover:text-gray-300">
-              <span className="font-semibold">{username}</span>
-            </li>
-            <li className="cursor-pointer hover:text-gray-300">
-              <button onClick={handleLogout} className="hover:underline">Logout</button>
+              <button
+                onClick={handleLogout}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+              >
+                Logout ({username})
+              </button>
             </li>
           </>
         ) : (

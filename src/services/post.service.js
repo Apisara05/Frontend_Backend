@@ -11,8 +11,13 @@ const getByAuthorId = async (id) => {
   return await api.get(`${API_URL}/author/${id}`);
 };
 const createPost = async (post) => {
-  return await api.post(API_URL, post);
+  return await api.post(API_URL, post,{
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
 };
+
 const updatePost = async (id, post) => {
   return await api.put(`${API_URL}/${id}`, post);
 };
@@ -28,3 +33,4 @@ const PostService = {
   updatePost,
   deletePost,
 };
+export default PostService;

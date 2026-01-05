@@ -6,7 +6,7 @@ import Register from "../pages/Register";
 import CreatePost from "../pages/CreatePost";
 import EditPost from "../pages/EditPost";
 import Layout from "../Layouts/Layout";
-
+import PostDetail from "../pages/PostDetail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +27,18 @@ const router = createBrowserRouter([
       {
         path: "create-post",
         element: <CreatePost />,
+      },
+      {
+        path: "Post/:id",
+        element: <Post />,
+      },
+      {
+        path: "PostDetail/:id",
+        element: <PostDetail />,
+      },
+      {
+        path: "edit-post",
+        element: <EditPost />,
       },
     ],
   },

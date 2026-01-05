@@ -3,6 +3,9 @@ import { useNavigate } from "react-router";
 import AuthService from "../services/authentication.service";
 import { UserContext } from "../context/UserContext";
 import Swal from "sweetalert2";
+const API_URL = "http://localhost:5000/api/v1/auth";
+
+
 const Register = () => {
   const [user, setUser] = useState({
     username: "",
